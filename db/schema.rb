@@ -64,4 +64,5 @@ ActiveRecord::Schema.define(version: 2021_11_09_082515) do
   add_foreign_key "bookings", "users"
   add_foreign_key "reviews", "boyfriends"
   add_foreign_key "reviews", "users"
+  
 end
