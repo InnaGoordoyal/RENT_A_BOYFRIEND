@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_09_072531) do
+ActiveRecord::Schema.define(version: 2021_11_09_082515) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "boyfriend_id", null: false
+    t.integer "start_date"
+    t.integer "end_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["boyfriend_id"], name: "index_bookings_on_boyfriend_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
 
   create_table "boyfriends", force: :cascade do |t|
     t.string "first_name"
@@ -25,6 +36,16 @@ ActiveRecord::Schema.define(version: 2021_11_09_072531) do
     t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "boyfriend_id", null: false
+    t.bigint "user_id", null: false
+    t.string "review"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["boyfriend_id"], name: "index_reviews_on_boyfriend_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -39,4 +60,9 @@ ActiveRecord::Schema.define(version: 2021_11_09_072531) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "boyfriends"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "reviews", "boyfriends"
+  add_foreign_key "reviews", "users"
+  
 end
