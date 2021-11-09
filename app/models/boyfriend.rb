@@ -1,5 +1,6 @@
 class Boyfriend < ApplicationRecord
- has_many :users, :bookings, :reviews
+  has_many :users
+  has_many :bookings
 
- validates :first_name, :last_name, :age, :category, :email, presence: true
+  validates :first_name, :last_name, :age, :category, :email, presence: true
 end

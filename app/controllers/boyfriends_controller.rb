@@ -1,9 +1,14 @@
 class BoyfriendsController < ApplicationController
+
   def index
-    @boyfriends = boyfriends.all
+    @boyfriends = Boyfriend.all
   end
 
   def show
-    @boyfriends = boyfriends.find(params[id])
+    @boyfriend = Boyfriend.find(params[id])
   end
+
+  def create
+  end
+
 end
