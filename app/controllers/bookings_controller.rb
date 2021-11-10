@@ -7,7 +7,21 @@ class BookingsController < ApplicationController
     @bookings = bookings.all
   end
 
- #def create
-  #@bookings = @Bookings.new(booking_params)
- #end
+  def create
+   @boyfriend = Boyfriend.find(params[:boyfriend_id])
+   @booking = Booking.new(booking_params)
+   @booking.boyfriend = @boyfriend
+   @booking.user = current_user
+    if @booking.save
+     redirect_to bookings_path
+     else
+      render :new
+    end
+  end
+
+ private
+
+  def booking_params
+    params.require(:booking).permit(:start_date, :end_date)
+  end
 end
