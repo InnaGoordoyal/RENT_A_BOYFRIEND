@@ -1,10 +1,43 @@
- <div class="container">
- <br> 
-<h2><%= @boyfriend.first_name %> <%= @boyfriend.last_name %></h2>
-<p><%= @boyfriend.age %></p>
- <p><%= @boyfriend.email %></p>
- <p><%= @boyfriend.phone_number %></p>
- <p><%= @boyfriend.category %></p>
- <p><%= @boyfriend.boyfriend_description %></p>
-<%= link_to "Book!", new_boyfriend_booking_path(@boyfriend)%>
+<div class="container">
+ <br>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+       </div>
+          <div class="col-md-8">
+            <div class="card-body">
+             <ol>
+              <h2><%= @boyfriend.first_name %> <%= @boyfriend.last_name %></h2>
+              <ol>
+              <br>
+              <p>Age: <%= @boyfriend.age %></p>
+             <p>Description: <em> "<%= @boyfriend.boyfriend_description %>"</em></p>
+             <p>Email: <%= @boyfriend.email %></p>
+             <p>Contact Number: <%= @boyfriend.phone_number %></p>
+            <br>
+        <ol>
+    </div>
+  </div>
+</div>
+
+<div class="container mb-5">
+  <div class="d-flex justify-content-between my-4">
+    <%= link_to 'Back 😪',:back, class: 'btn btn-flat' %>
+    <%= link_to "Book!", new_boyfriend_booking_path(@boyfriend), class: 'text-center', class: 'btn btn-flat'%>
+  </div>
+</div>
+
+
+
+<!--<div class="container">
+  <br>
+ <div>
+  <h2><%= @boyfriend.first_name %> <%= @boyfriend.last_name %></h2>
+  <p><%= @boyfriend.age %></p>
+  <p><%= @boyfriend.email %></p>
+  <p><%= @boyfriend.phone_number %></p>
+  <p><%= @boyfriend.category %></p>
+  <p><%= @boyfriend.boyfriend_description %></p>
+ <%= link_to "Book!", new_boyfriend_booking_path(@boyfriend), class: 'btn btn-flat'%>
+ <%= link_to 'Back', :back, class: 'btn btn-flat' %>
 </div>

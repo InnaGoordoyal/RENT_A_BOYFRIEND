@@ -1,5 +1,9 @@
-<%= simple_form_for ([@boyfriend, @booking]), method: :post do |f| %>
- <%= f.input :start_date, as: :date, html5: true %>
-  <%= f.input :end_date, as: :date, html5: true %>
-  <%= f.submit "Confirm Booking", class: "btn btn-primary" %>
-<% end %>
+<div class= "container py-5 mb-40">
+  <div class= "bg-white rounded shadow h-100",class="card-body">
+    <%= simple_form_for ([@boyfriend, @booking]), method: :post do |f| %>
+     <%= f.input :start_date, as: :date, html5: true %>
+      <%= f.input :end_date, as: :date, html5: true %>
+      <%= f.submit "Confirm Booking", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
