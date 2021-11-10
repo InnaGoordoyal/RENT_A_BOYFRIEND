@@ -1,10 +1,10 @@
 class BookingsController < ApplicationController
   def show
-   @bookings = bookings.find(params[:id])
+   @bookings = Booking.find(params[:id])
   end
 
   def index
-    @bookings = bookings.all
+    @bookings = Booking.all
   end
 
   def new
@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
    @booking.boyfriend = @boyfriend
    @booking.user = current_user
     if @booking.save
-     redirect_to bookings_path
+     redirect_to boyfriend_bookings_path
      else
       render :new
     end
