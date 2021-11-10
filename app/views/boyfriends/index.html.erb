@@ -3,10 +3,8 @@
   <% @boyfriends.each do |boyfriend| %>
     <li>
       <%= link_to boyfriend_path(boyfriend) do %>
-        <a href="#">
-          <%= boyfriend.first_name%>
-          <%= boyfriend.last_name %>
-        </a>
+        <%= boyfriend.first_name%>
+        <%= boyfriend.last_name %>
       <% end %>
     </li>
 
