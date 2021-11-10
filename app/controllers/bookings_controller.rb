@@ -7,6 +7,11 @@ class BookingsController < ApplicationController
     @bookings = bookings.all
   end
 
+  def new
+    @boyfriend = Boyfriend.find(params[:boyfriend_id])
+    @booking = Booking.new
+   end
+
   def create
    @boyfriend = Boyfriend.find(params[:boyfriend_id])
    @booking = Booking.new(booking_params)
