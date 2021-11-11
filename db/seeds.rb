@@ -12,8 +12,10 @@ superman = Boyfriend.create(first_name: "John",
                             email: "johndoe@gmail.com",
                             phone_number: 57667737,
                             category: "Superhero",
-                          boyfriend_description: "Super gentle man full of muscles undestructible"
-                         )
+                            boyfriend_description: "Super gentle man full of muscles undestructible"
+                            address: "Quatre-Bornes"
+                            price: "Rs 500"
+                          )
 
  jack = Boyfriend.create(first_name: "Jack",
                              last_name: "Reaper",
@@ -22,6 +24,8 @@ superman = Boyfriend.create(first_name: "John",
                              phone_number: 57664405,
                              category: "killer",
                              boyfriend_description: "Amazin gentleman with killer eyes"
+                             address: "Quatre-Bornes"
+                             price: "Rs 500"
                            )
 
  daniel = Boyfriend.create(first_name: "Daniel",
@@ -31,6 +35,8 @@ superman = Boyfriend.create(first_name: "John",
                              phone_number: 58007737,
                              category: "Artist",
                              boyfriend_description: "Call me James 007"
+                             address: "Quatre-Bornes"
+                             price: "Rs 500"
                            )
 
  dwayne = Boyfriend.create(first_name: "Dawyne",
@@ -40,6 +46,8 @@ superman = Boyfriend.create(first_name: "John",
                              phone_number: 57666637,
                              category: "Westler",
                              boyfriend_description: "The Rock"
+                             address: "Quatre-Bornes"
+                             price: "Rs 500"
                            )
 
  tom = Boyfriend.create(first_name: "Tom",
@@ -49,6 +57,8 @@ superman = Boyfriend.create(first_name: "John",
                              phone_number: 57067739,
                              category: "Web Developper",
                              boyfriend_description: "Call me Tommy!"
+                             address: "Quatre-Bornes"
+                             price: "Rs 500"
                            )
 
  Bradley = Boyfriend.create(first_name: "Bradley",
@@ -58,4 +68,6 @@ superman = Boyfriend.create(first_name: "John",
                              phone_number: 57061139,
                              category: "Footballer",
                              boyfriend_description: "Looking for my Lady Gaga!"
+                             address: "Quatre-Bornes"
+                             price: "Rs 500"
                            )
