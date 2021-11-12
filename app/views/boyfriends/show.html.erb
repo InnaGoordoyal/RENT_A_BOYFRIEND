@@ -1,11 +1,58 @@
-<div class="container">
+<div class="card py-4 m-5">
+  <br>
+  <ol>
+  <div class="card mb-4" style="max-width: 500px;">@vg
+    <div class="row no-gutters">
+      <div class="col-md-4">
+          <div class="col-md-8">
+           <ol>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+          </div>
+      </div>
+
+      <div>
+       <p>Age: <%= @boyfriend.age %></p>
+       <p>Description: <em> "<%= @boyfriend.boyfriend_description %>"</em></p>
+       <p>Email: <%= @boyfriend.email %></p>
+       <p>Contact Number: <%= @boyfriend.phone_number %></p>
+       <p>Category: <%= @boyfriend.category %></p>
+       <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex align-item-center  my-4">
+   <h2><%= @boyfriend.first_name %> <%= @boyfriend.last_name %></h2>
+  </div>
+
+
+
+  <div class="d-flex align-items-center justify-content-between m-4">
+   <%= link_to 'Back 😪',:back, class: 'btn btn-flat' %>
+   <%= link_to "Book!", new_boyfriend_booking_path(@boyfriend), class: 'text-center', class: 'btn btn-flat m-4'%>
+  </div>
+</div>
+
+
+<!--<div class="container">
  <br>
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row no-gutters">
     <div class="col-md-4">
        </div>
           <div class="col-md-8">
-            <div class="card-body">
+            <div class="card-body rounded shadow">
              <ol>
               <h2><%= @boyfriend.first_name %> <%= @boyfriend.last_name %></h2>
               <ol>

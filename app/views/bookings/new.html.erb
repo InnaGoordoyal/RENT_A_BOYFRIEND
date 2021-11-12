@@ -1,9 +1,17 @@
 <div class= "container py-5 mb-40">
-  <div class= "bg-white rounded shadow h-100",class="card-body">
-    <%= simple_form_for ([@boyfriend, @booking]), method: :post do |f| %>
-     <%= f.input :start_date, as: :date, html5: true %>
-      <%= f.input :end_date, as: :date, html5: true %>
-      <%= f.submit "Confirm Booking", class: "btn btn-primary" %>
+  <div class= "d-flex align-items-center justify-content-center mb-4">
+   <h2><strong>Book Now</strong><h2>
+  </div>
+  <div class= "bg-white rounded shadow h-100 card-body align-items-center py-5 form-new">
+
+    <%= simple_form_for ([@boyfriend, @booking]), remote: true do |f| %>
+     <%= f.input :start_date, as: :date, html5: true, input_html: {class: 'form-input'} %>
+     <%= f.input :end_date, as: :date, html5: true, input_html: {class: 'form-input'} %>
+
+    <%= f.submit "Confirm Booking", class: 'btn btn-gradient' %>
     <% end %>
+    <%= link_to 'Cancel Booking', boyfriend_path(@boyfriend), class: 'btn btn-ghost' %>
+
+
   </div>
 </div>
