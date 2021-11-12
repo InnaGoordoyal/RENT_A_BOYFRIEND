@@ -1,33 +1,27 @@
-<div class="cover mb-4 d-flex align-items-center justify-content-center" >
-<div class="container">
- <br>
-<div class="card mb-3" style="max-width: 540px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-       </div>
-          <div class="col-md-8">
-            <div class="card-body">
-             <ol>
-              <h2><%= @boyfriend.first_name %> <%= @boyfriend.last_name %></h2>
-              <ol>
-              <br>
-              <p>Age: <%= @boyfriend.age %></p>
-             <p>Description: <em> "<%= @boyfriend.boyfriend_description %>"</em></p>
-             <p>Email: <%= @boyfriend.email %></p>
-             <p>Contact Number: <%= @boyfriend.phone_number %></p>
-             <p>Address: <%= @boyfriend.address %></p>
-             <p>Price: <%= @boyfriend.price %></p>
-            <br>
-        <ol>
-    </div>
-  </div>
-</div>
 
-<div class="container mb-5">
-  <div class="d-flex justify-content-between my-4">
-    <%= link_to 'Back 😪',:back, class: 'btn btn-flat' %>
-    <%= link_to "Book!", new_boyfriend_booking_path(@boyfriend), class: 'text-center', class: 'btn btn-flat'%>
-  </div>
-</div>
-</div>
+    <div>
+      <div class="container">
+  <h1>Our Profile</h1>
+  <div class="d-flex row justify-content-center">
+      <div class="col-lg-4">
+        <div class="card bg-light my-3">
+          <img height="" />
+          <div class="card-body d-flex align-items-center"> 
+            <div class="">
+              <h3 class="card-title fw-bolder"> <%= @boyfriend.first_name %> <%= @boyfriend.last_name %> </h3>
+            </div>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Age: <%= @boyfriend.age %></li>
+            <li Description @boyfriend.boyfriend_description></li>
+            <li class="list-group-item"> Price: Rs1199</li>
+             <li class="list-group-item"> Email: <%=@boyfriend.email %></li>
+             <li class="list-group-item"> Contact Number: <%= @boyfriend.phone_number %></li>
+             <li class="list-group-item"> Category: <%= @boyfriend.category %>
+          </ul>
+          
+            <%= link_to "Book!", new_boyfriend_booking_path(@boyfriend), class: 'text-center', class: 'btn btn-flat m-4'%>
+          </div>
+        </div>
+      </div>
 

@@ -1,10 +1,10 @@
 class BookingsController < ApplicationController
   def show
-   @bookings = Booking.find(params[:id])
+   @booking = Booking.find(params[:id])
   end
 
   def index
-    @bookings = Booking.all
+    @bookings = Booking.all.order(created_at: :desc)
   end
 
   def new
@@ -18,10 +18,16 @@ class BookingsController < ApplicationController
    @booking.boyfriend = @boyfriend
    @booking.user = current_user
     if @booking.save
-     redirect_to boyfriend_bookings_path
-     else
+     redirect_to bookings_path
+    else
       render :new
     end
+  end
+
+  def destroy
+   @booking = Booking.find(params[:id])
+   @booking.destroy
+   redirect_to bookings_path
   end
 
  private
