@@ -1,21 +1,27 @@
+<div class="search box">
+<div class="cover mb-4 d-flex align-items-center justify-content-center" >
 <%= form_tag boyfriends_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
-    placeholder: "Find a boyfriend"
+    placeholder: "Find a boyfriend..."
   %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+  </div>
+  <div class="cover mb-4 d-flex align-items-center justify-content-center" >
+  <%= submit_tag "Search", class: "btn btn-ghost" %>
 <% end %>
+</div>
+</div>
 
 <div class="cover mb-4 d-flex align-items-center justify-content-center" >
-  <h1>Boyfriend List</h1>
+  <h1>BOYFRIEND LIST</h1>
 </div>
 <div class="cover mb-4 d-flex align-items-center justify-content-center" >
 <div class= "row ">
 <div class ="col">
   <% @boyfriends.each do |boyfriend| %>
     <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <img src= "<%= boyfriend.photo %>" />
       <div class="card-product-infos">
         <%= link_to boyfriend_path(boyfriend) do %>
           <h2><%= boyfriend.first_name%>
@@ -28,3 +34,4 @@
 </div>
 </div>
 </div>
+

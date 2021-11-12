@@ -1,3 +1,4 @@
+<div class="cover mb-4 d-flex align-items-center justify-content-center" >
 <div class="container">
  <br>
 <div class="card mb-3" style="max-width: 540px;">
@@ -14,7 +15,7 @@
              <p>Description: <em> "<%= @boyfriend.boyfriend_description %>"</em></p>
              <p>Email: <%= @boyfriend.email %></p>
              <p>Contact Number: <%= @boyfriend.phone_number %></p>
-             <p>address: <%= @boyfriend.address %></p>
+             <p>Address: <%= @boyfriend.address %></p>
              <p>Price: <%= @boyfriend.price %></p>
             <br>
         <ol>
@@ -28,7 +29,7 @@
     <%= link_to "Book!", new_boyfriend_booking_path(@boyfriend), class: 'text-center', class: 'btn btn-flat'%>
   </div>
 </div>
-
+</div>
 
 
 <!--<div class="container">
