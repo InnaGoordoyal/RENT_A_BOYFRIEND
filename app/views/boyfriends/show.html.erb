@@ -16,6 +16,8 @@
                            <li class="list-group-item">Age: <%= @boyfriend.age %></li>
                            <li class="list-group-item"> Email: <%=@boyfriend.email %></li>
                            <li class="list-group-item"> Contact Number: <%= @boyfriend.phone_number %></li>
+                           <li class="list-group-item"> Address: <%= @boyfriend.address %></li>
+                           <li class="list-group-item"> Price: <%= @boyfriend.price %></li>
                           </ul>
                            <%= link_to "Book!", new_boyfriend_booking_path(@boyfriend), class: 'text-center', class: 'btn btn-gradient m-4'%>
                 </div>
