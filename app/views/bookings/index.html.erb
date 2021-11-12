@@ -2,7 +2,16 @@
 <div class="container">
  <br> 
  <h1>Congratulation, Your booking has been confirmed!</h1>
-</div> 
+
+ <ol>
+<% @bookings.each do |booking| %> 
+<h2><%= booking.boyfriend.first_name %> <%= booking.boyfriend.last_name %> 
+<p><%= booking.start_date %></p>
+ <p><%= booking.end_date %></p>
+ <%end%>
+ </ol>
+</div>
+
   <div class= " bg-white rounded shadow h-100 card-body align-items-center py-5 form-new">
     <% @bookings.each do |booking| %>
       <h2><em><%= booking.boyfriend.first_name %> <%= booking.boyfriend.last_name %></em>
@@ -19,4 +28,5 @@
     <%end%>
     </ol>
   </div>
+
 
