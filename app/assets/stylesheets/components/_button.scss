@@ -1,0 +1,31 @@
+.btn-gradient{
+ background: rgb(210, 106, 106);
+ color:rgb(251, 234, 208);
+ float:left;
+}
+
+.btn-ghost{
+ color: #c08888;
+ border: 1px solid #4A4A4A;
+ border-radius: 4px;
+ font-weight: lighter;
+ opacity: 0.6;
+ transition: opacity 0.3s ease;
+ margin-left: 30px;
+}
+
+.btn-light {
+ background-color: whitesmoke;
+  color: #c08888;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 4ppx;
+  font-weight: lighter;
+  opacity: 0.6;
+ text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ligt:hover {
+  opacity: 1;
+}

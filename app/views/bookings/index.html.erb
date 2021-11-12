@@ -1,11 +1,19 @@
+
 <div class="container">
- <br>
- <h1>Congratulations, Your booking has been confirmed!</h1>
- <ol>
-<% @bookings.each do |booking| %>
-<h2><%= booking.boyfriend.first_name %> <%= booking.boyfriend.last_name %>
-<p><%= booking.start_date %></p>
- <p><%= booking.end_date %></p>
- <%end%>
- </ol>
+ <br> 
+ <h1>Congratulation, Your booking has been confirmed!</h1>
 </div>
+  <div class= " bg-white rounded shadow h-100 card-body align-items-center py-5 form-new">
+    <% @bookings.each do |booking| %>
+      <h2><em><%= booking.boyfriend.first_name %> <%= booking.boyfriend.last_name %></em>
+      <br>
+      <br>
+      <p>Start Date: <%= booking.start_date %></p>
+      <p>End Date: <%= booking.end_date %></p>
+     <div class= "btn btn-light">
+       <%=link_to "Delete", booking_path(booking), method: :delete %>
+     </div>
+       <hr>
+    <%end%>
+    </ol>
+  </div>
