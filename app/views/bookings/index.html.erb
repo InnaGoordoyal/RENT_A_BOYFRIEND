@@ -1,10 +1,8 @@
-<div class="container py-5 mb-40">
-  <div class ="d-flex align-item-center justify-content-center mb-4">
-    <br>
-   <h1><strong>Congratulations, Your booking has been confirmed!</strong></h1>
-   <ol>
-  </div>
 
+<div class="container">
+ <br> 
+ <h1>Congratulation, Your booking has been confirmed!</h1>
+</div> 
   <div class= " bg-white rounded shadow h-100 card-body align-items-center py-5 form-new">
     <% @bookings.each do |booking| %>
       <h2><em><%= booking.boyfriend.first_name %> <%= booking.boyfriend.last_name %></em>
@@ -20,4 +18,4 @@
     <%end%>
     </ol>
   </div>
-</div>
+
